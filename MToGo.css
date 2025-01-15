@@ -1,0 +1,167 @@
+﻿/*
+    color scheme:
+   
+    dark green  #34601D  link color, bgcolor of links when mouse hovers over them
+    
+    medium green  #418904  h2, h3, Drop Cap A 
+        
+    
+    light green  #93B611 - links after being clicked on
+    
+    off white  #F9FCF9 - Wrapper bgcolor
+
+  font is Lucida Sans or Tahoma or Geneva
+
+for the drop cap letter the font-family is Georgia, the line height is 3.4375em
+         the color is #418904 and the font size is
+            font-size is 4.6875em
+
+
+*/
+:root{
+  --dark-green: #34601D;
+  --medium-green: #418904;
+  --light-green: #93B611;
+  --off-white: #F9FCF9;
+  --font-family:  'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  --font-family-2: Georgia, 'Times New Roman', Times, serif;
+  --line_height: 3.4375em;
+  --font-color: #418904;
+  --font-size: 4.6875em;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+#logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2em;
+}
+#logo-medium{
+  display: none;
+}
+
+#logo-phone{
+  display: none;
+}
+nav{
+ font-size: 20px;
+  font-family: var(--font-family);
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+a{
+  color: var(--dark-green);
+  font-weight: bold;
+}
+
+#mainPhoto{
+float: left;
+margin-right:1em;
+padding-right: 1em;
+}
+
+#wrapper {
+  border: 1px solid #000;
+  width: 90%;
+  margin: auto;
+  margin-top: 3em;
+  margin-bottom: 3em;
+  padding: 1em;
+border-radius: 15px;
+}
+
+hr{
+  border: 2px solid var(--medium-green);
+  margin-top: 1em;
+}
+.desktop{
+  font-size: var(--font-size);
+  color: var(--font-color);
+  float: left;
+  
+}
+
+
+main{
+  margin-top: 2em;
+  font-family:var(--font-family-2);
+}
+
+ul {
+  margin-top: 1em;
+    font-size: 20px;
+    list-style-type: circle;
+    margin-left: 2em;
+}
+
+p{
+  font-size: 20px;
+  margin-top: 1em ;
+  width: 98%;
+}
+
+h3{
+  font-size: 22px;
+  font-family: var(--font-family);
+  margin-top: 1em;
+  color: var(--medium-green);
+}
+
+footer{
+  margin-top: 1em;
+  font-family: var(--font-family);
+  text-align: center;
+}
+
+@media (max-width:64.1em){
+  #mainPhoto{
+    display: none;
+    
+  }
+  #logo {
+    display: none;
+  }
+
+  #logo-medium{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+  }
+#logo-phone{
+  display: none;
+}
+  main{
+    font-family: var(--font-family);
+  }
+ .desktop{
+  text-decoration: none;
+  font-size: 20px;
+ }
+  .highlight{
+    font-weight: bold;
+  color: var(--medium-green);
+  }
+}
+
+@media (max-width: 45em){
+
+    #logo-medium{
+      display: none;
+    }
+    #logo-phone{
+      
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2em;
+      
+    }
+}
